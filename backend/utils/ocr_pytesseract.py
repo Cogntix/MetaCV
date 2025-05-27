@@ -26,6 +26,6 @@ def extract_text_ocr(pdf_path):
     return text
 
 # Example usage
-ocr_text = extract_text_ocr("../data/CV_Imagebased2.pdf")
+ocr_text = extract_text_ocr("../data/CV_Imagebased.pdf")
 print("OCR Output:\n", ocr_text)
 
