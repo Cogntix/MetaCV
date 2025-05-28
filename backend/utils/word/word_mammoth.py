@@ -7,6 +7,3 @@ def extract_text_from_docx(docx_path):
         messages = result.messages  # Any warnings during extraction
     return text
 
-# Example usage
-text = extract_text_from_docx("../data/CV_Textbased_Word.docx")
-print("Extracted text:\n", text)

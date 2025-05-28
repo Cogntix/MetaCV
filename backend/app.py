@@ -1,11 +1,13 @@
 # app.py
-from flask import Flask
-from routes.Extract import extract_bp
+from fastapi import FastAPI
+from routes.extract import router as extract_router  # Note: renamed to router (FastAPI convention)
 
-app = Flask(__name__)
+app = FastAPI()
 
-# Register Blueprints
-app.register_blueprint(extract_bp)
+# Register Routers
+app.include_router(extract_router)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# This is only for local development; in production, use: `uvicorn app:app --reload`
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app:app", host="127.0.0.1", port=5000, reload=True)

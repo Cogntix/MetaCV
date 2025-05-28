@@ -1,33 +1,31 @@
-from flask import Blueprint, request, jsonify
+from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi.responses import JSONResponse
 import os
 import tempfile
 
-from utils.extract_text import extract_text_from_file
+from controllers.extractCVData import extract_text_from_file
 
-extract_bp = Blueprint('extract', __name__)
+router = APIRouter()
 
-@extract_bp.route('/extract', methods=['POST'])
-def extract():
-    if 'file' not in request.files:
-        return jsonify({"error": "No file part in the request"}), 400
-
-    file = request.files['file']
-    if file.filename == '':
-        return jsonify({"error": "No file selected"}), 400
+@router.post("/extract")
+async def extract(file: UploadFile = File(...)):
+    if not file:
+        raise HTTPException(status_code=400, detail="No file uploaded")
 
     try:
-        # Save the uploaded file to a temporary file
-        with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(file.filename)[1]) as temp_file:
-            file.save(temp_file.name)
+        # Create a temporary file with the same extension
+        suffix = os.path.splitext(file.filename)[1]
+        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp_file:
+            temp_file.write(await file.read())
             temp_file_path = temp_file.name
 
-        # Extract text based on file type
+        # Extract text
         extracted_text = extract_text_from_file(temp_file_path)
 
-        # Optionally remove temp file after processing
+        # Clean up
         os.remove(temp_file_path)
 
-        return jsonify({"extracted_text": extracted_text})
-    
+        return JSONResponse(content={"extracted_text": extracted_text})
+
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        raise HTTPException(status_code=500, detail=str(e))
