@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 import os
 import tempfile
 
-from controllers.extractCVData import extract_text_from_file
+from backend.routes.extractCVData import extract_text_from_file
 
 router = APIRouter()
 

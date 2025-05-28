@@ -1,6 +1,6 @@
 # app.py
 from fastapi import FastAPI
-from routes.extract import router as extract_router  # Note: renamed to router (FastAPI convention)
+from backend.controllers.extract import router as extract_router  # Note: renamed to router (FastAPI convention)
 
 app = FastAPI()
 
