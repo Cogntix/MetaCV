@@ -1,0 +1,1391 @@
+{
+  "commonQuestions": [
+    {
+      "id": "C1",
+      "question": "What is your full name?",
+      "keywords": ["name", "full name", "called", "my name is"],
+      "type": "text",
+      "answerSource": "ai"
+    },
+    {
+      "id": "C2",
+      "question": "What is your email address?",
+      "keywords": [
+        "email",
+        "contact",
+        "address",
+        "@",
+        "gmail",
+        "outlook",
+        "yahoo"
+      ],
+      "type": "email",
+      "answerSource": "keywords"
+    },
+    {
+      "id": "C3",
+      "question": "What is your phone number?",
+      "keywords": ["phone", "mobile", "contact", "call", "number", "+", "tel"],
+      "type": "phone",
+      "answerSource": "keywords"
+    },
+    {
+      "id": "C4",
+      "question": "What is your LinkedIn profile URL?",
+      "keywords": [
+        "linkedin",
+        "profile",
+        "url",
+        "linkedin.com",
+        "professional profile"
+      ],
+      "type": "url",
+      "answerSource": "user"
+    },
+    {
+      "id": "C5",
+      "question": "What is your current location?",
+      "keywords": [
+        "location",
+        "city",
+        "country",
+        "address",
+        "based in",
+        "live in",
+        "from"
+      ],
+      "type": "text",
+      "answerSource": "ai"
+    },
+    {
+      "id": "C6",
+      "question": "Are you willing to relocate?",
+      "keywords": [
+        "relocate",
+        "move",
+        "relocation",
+        "willing to move",
+        "open to relocation"
+      ],
+      "type": "boolean",
+      "answerSource": "user"
+    },
+    {
+      "id": "C7",
+      "question": "Are you legally authorized to work in this country?",
+      "keywords": [
+        "legal",
+        "authorized",
+        "work permit",
+        "visa",
+        "citizen",
+        "eligible to work"
+      ],
+      "type": "boolean",
+      "answerSource": "user"
+    },
+    {
+      "id": "C8",
+      "question": "What is your highest level of education?",
+      "keywords": [
+        "education",
+        "degree",
+        "qualification",
+        "university",
+        "college",
+        "bachelor",
+        "master",
+        "phd",
+        "diploma"
+      ],
+      "type": "dropdown",
+      "answerSource": "ai"
+    },
+    {
+      "id": "C9",
+      "question": "What languages do you speak and at what proficiency level?",
+      "keywords": [
+        "language",
+        "speak",
+        "proficiency",
+        "fluent",
+        "native",
+        "conversational"
+      ],
+      "type": "list",
+      "answerSource": "ai"
+    },
+    {
+      "id": "C10",
+      "question": "How many years of relevant work experience do you have?",
+      "keywords": [
+        "experience",
+        "years",
+        "work",
+        "professional experience",
+        "career"
+      ],
+      "type": "number",
+      "answerSource": "ai"
+    },
+    {
+      "id": "C11",
+      "question": "What is your desired salary range?",
+      "keywords": [
+        "salary",
+        "compensation",
+        "pay",
+        "range",
+        "expected salary",
+        "$",
+        "USD",
+        "annual"
+      ],
+      "type": "range",
+      "answerSource": "user"
+    },
+    {
+      "id": "C12",
+      "question": "When can you start working if selected?",
+      "keywords": [
+        "start date",
+        "availability",
+        "notice period",
+        "immediately",
+        "available"
+      ],
+      "type": "date",
+      "answerSource": "user"
+    },
+    {
+      "id": "C13",
+      "question": "How did you hear about this position?",
+      "keywords": ["refer", "source", "hear", "about", "found", "discovered"],
+      "type": "dropdown",
+      "answerSource": "user"
+    },
+    {
+      "id": "C14",
+      "question": "Do you have any professional certifications relevant to this role?",
+      "keywords": [
+        "certification",
+        "certificate",
+        "professional",
+        "certified",
+        "credential"
+      ],
+      "type": "list",
+      "answerSource": "ai"
+    },
+    {
+      "id": "C15",
+      "question": "Briefly describe your career objectives.",
+      "keywords": [
+        "objective",
+        "goal",
+        "career",
+        "aim",
+        "aspiration",
+        "future plans"
+      ],
+      "type": "textarea",
+      "answerSource": "ai"
+    }
+  ],
+  "roleQuestions": {
+    "Software Engineer": [
+      {
+        "id": "SE1",
+        "question": "What programming languages are you proficient in?",
+        "keywords": [
+          "programming",
+          "languages",
+          "code",
+          "develop",
+          "Python",
+          "Java",
+          "JavaScript",
+          "C++",
+          "React",
+          "Node"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE2",
+        "question": "What frameworks and libraries have you worked with?",
+        "keywords": [
+          "framework",
+          "library",
+          "tool",
+          "React",
+          "Angular",
+          "Vue",
+          "Django",
+          "Flask",
+          "Spring"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE3",
+        "question": "Describe your experience with database technologies.",
+        "keywords": [
+          "database",
+          "SQL",
+          "NoSQL",
+          "data",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Redis"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE4",
+        "question": "Have you contributed to any open-source projects?",
+        "keywords": [
+          "open-source",
+          "contribute",
+          "GitHub",
+          "open source",
+          "community",
+          "repository"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE5",
+        "question": "Describe a challenging project you worked on and how you solved technical problems.",
+        "keywords": [
+          "project",
+          "challenge",
+          "solve",
+          "technical",
+          "problem",
+          "solution",
+          "development"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE6",
+        "question": "What version control systems are you familiar with?",
+        "keywords": [
+          "version control",
+          "git",
+          "SVN",
+          "GitHub",
+          "GitLab",
+          "Bitbucket"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE7",
+        "question": "What is your experience with cloud platforms?",
+        "keywords": [
+          "cloud",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Google Cloud",
+          "Amazon Web Services"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SE8",
+        "question": "Describe your experience with Agile development methodologies.",
+        "keywords": [
+          "agile",
+          "scrum",
+          "sprint",
+          "methodology",
+          "kanban",
+          "standups"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      }
+    ],
+    "Data Scientist": [
+      {
+        "id": "DS1",
+        "question": "What data analysis tools and languages are you proficient in?",
+        "keywords": [
+          "Python",
+          "R",
+          "MATLAB",
+          "analysis",
+          "pandas",
+          "numpy",
+          "scikit-learn",
+          "TensorFlow"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DS2",
+        "question": "Describe your experience with machine learning algorithms.",
+        "keywords": [
+          "machine learning",
+          "algorithm",
+          "model",
+          "ML",
+          "AI",
+          "neural network",
+          "regression"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DS3",
+        "question": "What types of data visualization tools have you used?",
+        "keywords": [
+          "visualization",
+          "Tableau",
+          "PowerBI",
+          "chart",
+          "matplotlib",
+          "seaborn",
+          "plotly"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DS4",
+        "question": "Describe a data science project where you derived significant insights.",
+        "keywords": [
+          "project",
+          "insight",
+          "analysis",
+          "result",
+          "data",
+          "findings",
+          "impact"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DS5",
+        "question": "What is your experience with big data technologies?",
+        "keywords": [
+          "big data",
+          "Hadoop",
+          "Spark",
+          "scale",
+          "distributed",
+          "Apache"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DS6",
+        "question": "Have you deployed machine learning models into production?",
+        "keywords": [
+          "deploy",
+          "production",
+          "implement",
+          "MLOps",
+          "model deployment"
+        ],
+        "type": "boolean",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DS7",
+        "question": "What statistical methods do you commonly use?",
+        "keywords": [
+          "statistics",
+          "regression",
+          "hypothesis",
+          "correlation",
+          "statistical analysis"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      }
+    ],
+    "UX/UI Designer": [
+      {
+        "id": "UX1",
+        "question": "What design tools are you proficient with?",
+        "keywords": [
+          "Figma",
+          "Adobe XD",
+          "Sketch",
+          "tools",
+          "Photoshop",
+          "Illustrator",
+          "InVision"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "UX2",
+        "question": "Can you provide a portfolio link showcasing your design work?",
+        "keywords": [
+          "portfolio",
+          "work",
+          "showcase",
+          "design",
+          "behance",
+          "dribbble",
+          "website"
+        ],
+        "type": "url",
+        "answerSource": "keywords"
+      },
+      {
+        "id": "UX3",
+        "question": "Describe your design process from concept to implementation.",
+        "keywords": [
+          "process",
+          "concept",
+          "implement",
+          "workflow",
+          "design thinking",
+          "methodology"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "UX4",
+        "question": "What research methods do you use to inform your design decisions?",
+        "keywords": [
+          "research",
+          "user",
+          "testing",
+          "interview",
+          "usability",
+          "user research"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "UX5",
+        "question": "Describe a project where you improved user experience significantly.",
+        "keywords": [
+          "improve",
+          "experience",
+          "user",
+          "impact",
+          "UX",
+          "redesign",
+          "optimization"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "UX6",
+        "question": "How do you collaborate with developers and product managers?",
+        "keywords": [
+          "collaborate",
+          "developer",
+          "manager",
+          "team",
+          "handoff",
+          "communication"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "UX7",
+        "question": "Do you have experience with design systems?",
+        "keywords": [
+          "design system",
+          "component",
+          "pattern",
+          "library",
+          "style guide"
+        ],
+        "type": "boolean",
+        "answerSource": "ai"
+      }
+    ],
+    "Product Manager": [
+      {
+        "id": "PM1",
+        "question": "Describe a product you managed from concept to launch.",
+        "keywords": [
+          "product",
+          "manage",
+          "launch",
+          "concept",
+          "development",
+          "roadmap"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PM2",
+        "question": "What product management tools do you use?",
+        "keywords": [
+          "tool",
+          "Jira",
+          "Asana",
+          "roadmap",
+          "Trello",
+          "Monday",
+          "Notion"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PM3",
+        "question": "How do you prioritize product features?",
+        "keywords": [
+          "prioritize",
+          "feature",
+          "decision",
+          "value",
+          "priority",
+          "backlog"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PM4",
+        "question": "Describe how you gather and incorporate user feedback.",
+        "keywords": [
+          "feedback",
+          "user",
+          "gather",
+          "incorporate",
+          "customer",
+          "insights"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PM5",
+        "question": "How do you measure product success?",
+        "keywords": [
+          "measure",
+          "success",
+          "metric",
+          "KPI",
+          "analytics",
+          "performance"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PM6",
+        "question": "Describe your experience working with cross-functional teams.",
+        "keywords": [
+          "cross-functional",
+          "team",
+          "collaborate",
+          "stakeholder",
+          "coordination"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PM7",
+        "question": "Have you managed a product budget?",
+        "keywords": [
+          "budget",
+          "finance",
+          "resource",
+          "allocation",
+          "cost management"
+        ],
+        "type": "boolean",
+        "answerSource": "user"
+      }
+    ],
+    "DevOps Engineer": [
+      {
+        "id": "DO1",
+        "question": "What CI/CD tools have you worked with?",
+        "keywords": [
+          "CI/CD",
+          "Jenkins",
+          "GitLab",
+          "automation",
+          "continuous integration",
+          "pipeline"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DO2",
+        "question": "Describe your experience with containerization and orchestration.",
+        "keywords": [
+          "container",
+          "Docker",
+          "Kubernetes",
+          "orchestration",
+          "containerization"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DO3",
+        "question": "What monitoring and logging tools have you implemented?",
+        "keywords": [
+          "monitor",
+          "log",
+          "alert",
+          "observe",
+          "Prometheus",
+          "Grafana",
+          "ELK"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DO4",
+        "question": "Describe your experience with infrastructure as code.",
+        "keywords": [
+          "infrastructure",
+          "code",
+          "Terraform",
+          "CloudFormation",
+          "IaC"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DO5",
+        "question": "How do you approach system security and compliance?",
+        "keywords": [
+          "security",
+          "compliance",
+          "vulnerability",
+          "protect",
+          "secure",
+          "audit"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DO6",
+        "question": "Describe a time when you improved system reliability or performance.",
+        "keywords": [
+          "reliability",
+          "performance",
+          "improve",
+          "optimize",
+          "uptime",
+          "scalability"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "DO7",
+        "question": "What cloud platforms are you experienced with?",
+        "keywords": [
+          "cloud",
+          "AWS",
+          "Azure",
+          "GCP",
+          "Google Cloud",
+          "Amazon Web Services"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      }
+    ],
+    "QA Engineer": [
+      {
+        "id": "QA1",
+        "question": "What testing tools and frameworks have you used?",
+        "keywords": [
+          "test",
+          "tool",
+          "framework",
+          "automate",
+          "Selenium",
+          "TestNG",
+          "JUnit"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "QA2",
+        "question": "Describe your approach to test automation.",
+        "keywords": [
+          "automation",
+          "approach",
+          "strategy",
+          "framework",
+          "automated testing"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "QA3",
+        "question": "What types of testing are you experienced with?",
+        "keywords": [
+          "functional",
+          "performance",
+          "security",
+          "integration",
+          "unit testing",
+          "regression"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "QA4",
+        "question": "How do you track and report defects?",
+        "keywords": [
+          "defect",
+          "bug",
+          "track",
+          "report",
+          "issue tracking",
+          "bug report"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "QA5",
+        "question": "Describe a challenging bug you identified and helped resolve.",
+        "keywords": [
+          "bug",
+          "challenge",
+          "identify",
+          "resolve",
+          "debugging",
+          "troubleshoot"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "QA6",
+        "question": "What is your experience with test-driven development?",
+        "keywords": [
+          "TDD",
+          "test-driven",
+          "practice",
+          "methodology",
+          "test first"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "QA7",
+        "question": "Have you worked in an Agile testing environment?",
+        "keywords": [
+          "agile",
+          "sprint",
+          "iterative",
+          "methodology",
+          "scrum testing"
+        ],
+        "type": "boolean",
+        "answerSource": "ai"
+      }
+    ],
+    "Project Manager": [
+      {
+        "id": "PJM1",
+        "question": "What project management methodologies have you used?",
+        "keywords": [
+          "methodology",
+          "Agile",
+          "Waterfall",
+          "Scrum",
+          "PRINCE2",
+          "PMI"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PJM2",
+        "question": "What project management tools are you proficient with?",
+        "keywords": [
+          "tool",
+          "software",
+          "JIRA",
+          "MS Project",
+          "Asana",
+          "Trello",
+          "Monday"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PJM3",
+        "question": "Describe a complex project you managed and its outcome.",
+        "keywords": [
+          "project",
+          "manage",
+          "complex",
+          "outcome",
+          "leadership",
+          "delivery"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PJM4",
+        "question": "How do you handle project risks and issues?",
+        "keywords": [
+          "risk",
+          "issue",
+          "mitigate",
+          "manage",
+          "risk management",
+          "contingency"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PJM5",
+        "question": "Describe your approach to resource allocation and scheduling.",
+        "keywords": [
+          "resource",
+          "allocate",
+          "schedule",
+          "timeline",
+          "planning",
+          "capacity"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PJM6",
+        "question": "How do you communicate project status to stakeholders?",
+        "keywords": [
+          "communicate",
+          "stakeholder",
+          "status",
+          "report",
+          "updates",
+          "dashboard"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "PJM7",
+        "question": "Do you have any project management certifications?",
+        "keywords": [
+          "certification",
+          "PMP",
+          "PRINCE2",
+          "credential",
+          "certified",
+          "PMI"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      }
+    ],
+    "Marketing Specialist": [
+      {
+        "id": "MK1",
+        "question": "What marketing channels are you experienced with?",
+        "keywords": [
+          "channel",
+          "social media",
+          "email",
+          "SEO",
+          "SEM",
+          "content marketing",
+          "digital"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "MK2",
+        "question": "Describe a successful marketing campaign you managed.",
+        "keywords": [
+          "campaign",
+          "successful",
+          "result",
+          "impact",
+          "marketing",
+          "promotion"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "MK3",
+        "question": "What marketing analytics tools have you used?",
+        "keywords": [
+          "analytics",
+          "tool",
+          "measure",
+          "data",
+          "Google Analytics",
+          "HubSpot"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "MK4",
+        "question": "Describe your experience with content creation and management.",
+        "keywords": [
+          "content",
+          "create",
+          "manage",
+          "strategy",
+          "copywriting",
+          "blog"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "MK5",
+        "question": "How do you measure marketing ROI?",
+        "keywords": [
+          "ROI",
+          "measure",
+          "metric",
+          "performance",
+          "return on investment",
+          "conversion"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "MK6",
+        "question": "What is your experience with SEO/SEM strategies?",
+        "keywords": [
+          "SEO",
+          "SEM",
+          "search",
+          "keyword",
+          "Google Ads",
+          "optimization"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "MK7",
+        "question": "Have you managed marketing budgets?",
+        "keywords": [
+          "budget",
+          "spend",
+          "allocate",
+          "finance",
+          "budget management"
+        ],
+        "type": "boolean",
+        "answerSource": "user"
+      }
+    ],
+    "Sales Representative": [
+      {
+        "id": "SR1",
+        "question": "What CRM systems have you worked with?",
+        "keywords": [
+          "CRM",
+          "Salesforce",
+          "HubSpot",
+          "system",
+          "customer relationship"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SR2",
+        "question": "Describe your sales methodology and approach.",
+        "keywords": [
+          "methodology",
+          "approach",
+          "process",
+          "technique",
+          "sales process",
+          "strategy"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SR3",
+        "question": "What were your sales targets and achievement rates in previous roles?",
+        "keywords": [
+          "target",
+          "quota",
+          "achieve",
+          "performance",
+          "sales numbers",
+          "revenue"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SR4",
+        "question": "Describe a challenging sale you closed successfully.",
+        "keywords": [
+          "challenge",
+          "close",
+          "success",
+          "deal",
+          "difficult client",
+          "negotiation"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SR5",
+        "question": "What industries have you sold to?",
+        "keywords": [
+          "industry",
+          "sector",
+          "client",
+          "market",
+          "vertical",
+          "B2B",
+          "B2C"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SR6",
+        "question": "How do you build and maintain client relationships?",
+        "keywords": [
+          "relationship",
+          "client",
+          "build",
+          "maintain",
+          "networking",
+          "trust"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "SR7",
+        "question": "Have you managed a sales team?",
+        "keywords": [
+          "manage",
+          "team",
+          "lead",
+          "supervise",
+          "sales management",
+          "leadership"
+        ],
+        "type": "boolean",
+        "answerSource": "user"
+      }
+    ],
+    "Human Resources": [
+      {
+        "id": "HR1",
+        "question": "What HR software systems have you used?",
+        "keywords": [
+          "software",
+          "HRIS",
+          "ATS",
+          "system",
+          "Workday",
+          "BambooHR",
+          "SAP"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "HR2",
+        "question": "Describe your experience with recruitment and talent acquisition.",
+        "keywords": [
+          "recruit",
+          "talent",
+          "hire",
+          "acquisition",
+          "sourcing",
+          "interviewing"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "HR3",
+        "question": "What is your approach to employee relations and conflict resolution?",
+        "keywords": [
+          "relation",
+          "conflict",
+          "resolve",
+          "employee",
+          "mediation",
+          "HR issues"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "HR4",
+        "question": "Describe your experience with performance management processes.",
+        "keywords": [
+          "performance",
+          "manage",
+          "review",
+          "evaluate",
+          "appraisal",
+          "feedback"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "HR5",
+        "question": "What is your experience with HR compliance and regulations?",
+        "keywords": [
+          "compliance",
+          "regulation",
+          "law",
+          "policy",
+          "employment law",
+          "GDPR"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "HR6",
+        "question": "Describe a successful employee engagement initiative you implemented.",
+        "keywords": [
+          "engagement",
+          "initiative",
+          "implement",
+          "culture",
+          "employee satisfaction"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "HR7",
+        "question": "Do you have experience with compensation and benefits administration?",
+        "keywords": [
+          "compensation",
+          "benefit",
+          "salary",
+          "administration",
+          "payroll",
+          "benefits"
+        ],
+        "type": "boolean",
+        "answerSource": "user"
+      }
+    ],
+    "Customer Support": [
+      {
+        "id": "CS1",
+        "question": "What customer service tools have you used?",
+        "keywords": [
+          "tool",
+          "Zendesk",
+          "Intercom",
+          "helpdesk",
+          "customer service",
+          "support"
+        ],
+        "type": "multiselect",
+        "answerSource": "ai"
+      },
+      {
+        "id": "CS2",
+        "question": "Describe how you handle difficult customer interactions.",
+        "keywords": [
+          "difficult",
+          "handle",
+          "customer",
+          "interaction",
+          "conflict resolution",
+          "de-escalation"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "CS3",
+        "question": "What is your experience with implementing support processes?",
+        "keywords": [
+          "process",
+          "implement",
+          "procedure",
+          "workflow",
+          "support process",
+          "optimization"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "CS4",
+        "question": "Describe a situation where you went above and beyond for a customer.",
+        "keywords": [
+          "above",
+          "beyond",
+          "exceed",
+          "expectation",
+          "exceptional service"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "CS5",
+        "question": "How do you prioritize support tickets or customer issues?",
+        "keywords": [
+          "prioritize",
+          "ticket",
+          "issue",
+          "queue",
+          "triage",
+          "priority"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "CS6",
+        "question": "What metrics do you use to measure customer support success?",
+        "keywords": [
+          "metric",
+          "measure",
+          "success",
+          "KPI",
+          "CSAT",
+          "response time"
+        ],
+        "type": "textarea",
+        "answerSource": "ai"
+      },
+      {
+        "id": "CS7",
+        "question": "Have you created knowledge base articles or support documentation?",
+        "keywords": [
+          "knowledge base",
+          "documentation",
+          "article",
+          "help",
+          "FAQ",
+          "wiki"
+        ],
+        "type": "boolean",
+        "answerSource": "ai"
+      }
+    ]
+  },
+  "hiringStageForms": {
+    "initialApplication": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C10",
+      "C11",
+      "C12",
+      "C13"
+    ],
+    "secondaryScreening": ["C9", "C14", "C15"],
+    "technicalAssessment": {
+      "Software Engineer": ["SE1", "SE2", "SE3", "SE6", "SE7"],
+      "Data Scientist": ["DS1", "DS2", "DS3", "DS5", "DS7"],
+      "UX/UI Designer": ["UX1", "UX2", "UX3", "UX7"],
+      "Product Manager": ["PM2", "PM3", "PM5", "PM7"],
+      "DevOps Engineer": ["DO1", "DO2", "DO4", "DO7"],
+      "QA Engineer": ["QA1", "QA2", "QA3", "QA6"],
+      "Project Manager": ["PJM1", "PJM2", "PJM4", "PJM7"],
+      "Marketing Specialist": ["MK1", "MK3", "MK6"],
+      "Sales Representative": ["SR1", "SR3", "SR5"],
+      "Human Resources": ["HR1", "HR5", "HR7"],
+      "Customer Support": ["CS1", "CS5", "CS6"]
+    },
+    "finalInterview": {
+      "Software Engineer": ["SE4", "SE5", "SE8"],
+      "Data Scientist": ["DS4", "DS6"],
+      "UX/UI Designer": ["UX4", "UX5", "UX6"],
+      "Product Manager": ["PM1", "PM4", "PM6"],
+      "DevOps Engineer": ["DO3", "DO5", "DO6"],
+      "QA Engineer": ["QA4", "QA5", "QA7"],
+      "Project Manager": ["PJM3", "PJM5", "PJM6"],
+      "Marketing Specialist": ["MK2", "MK4", "MK5", "MK7"],
+      "Sales Representative": ["SR2", "SR4", "SR6", "SR7"],
+      "Human Resources": ["HR2", "HR3", "HR4", "HR6"],
+      "Customer Support": ["CS2", "CS3", "CS4", "CS7"]
+    }
+  },
+  "answerSourceStats": {
+    "keywords": {
+      "count": 6,
+      "questions": ["C1", "C2", "C3", "C4", "C5", "UX2"],
+      "description": "Pattern-based questions that can be answered by keyword matching (name, email, phone, etc.)"
+    },
+    "ai": {
+      "count": 78,
+      "description": "Questions requiring content analysis and intelligent responses (skills, experience, projects, etc.)"
+    },
+    "user": {
+      "count": 8,
+      "questions": [
+        "C6",
+        "C7",
+        "C11",
+        "C12",
+        "C13",
+        "PM7",
+        "MK7",
+        "SR7",
+        "HR7"
+      ],
+      "description": "Questions that typically result in N/A or require direct user input (preferences, availability, authorization, etc.)"
+    }
+  }
+}

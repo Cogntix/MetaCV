@@ -1,11 +1,11 @@
 # app.py
 from fastapi import FastAPI
-from backend.controllers.extract import router as extract_router  # Note: renamed to router (FastAPI convention)
+from routes.extract_route import router as extract  # Note: renamed to router (FastAPI convention)
 
 app = FastAPI()
 
 # Register Routers
-app.include_router(extract_router)
+app.include_router(extract)
 
 # This is only for local development; in production, use: `uvicorn app:app --reload`
 if __name__ == "__main__":
