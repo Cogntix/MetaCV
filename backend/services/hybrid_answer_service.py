@@ -19,9 +19,6 @@ async def generate_hybrid_answers(extractedText: str, jobPosition: str) -> Dict[
     keywordQuestions = [q for q in combinedQuestions if q["answerSource"] == "keywords"]
     aiQuestions = [q for q in combinedQuestions if q["answerSource"] == "ai"]
     userQuestions = [q for q in combinedQuestions if q["answerSource"] == "user"]
-
-    print("DEBUG: keyword type:")
-
     keywordResponse = generate_keyword_answers(baseCleanedText,keywordQuestions)
     keywordResults = [
         {

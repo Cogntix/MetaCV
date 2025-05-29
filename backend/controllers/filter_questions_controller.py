@@ -21,7 +21,7 @@ def get_filtered_questions(job_position: str) -> List[Dict[str, Any]]:
 
     specific_questions = role_questions.get(job_key, [])
     if not specific_questions:
-        specific_questions = role_questions.get(job_position, [])  # Fallback
+        specific_questions = role_questions.get(job_position, [])  
 
     return common_questions + specific_questions
 

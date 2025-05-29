@@ -16,7 +16,7 @@ MetaCV is a backend service for extracting structured information from resumes (
 - **Tesseract OCR**
 - **Poppler** (for `pdf2image`)
 - **Mammoth** (for `.docx` text extraction)
-note
+  note
 - **Python-docx** ( can use it for `.docx` text extraction)
 
 ## ⚙️ Setup Instructions
@@ -25,27 +25,50 @@ note
 
 ```bash
 git clone https://github.com/Cogntix/MetaCV.git
-cd MetaCV 
+cd MetaCV
 ```
 
 ### 2. Create a Virtual Environment
+
 ```bash
 python -m venv venv
-source venv/bin/activate  
+source venv/bin/activate
 ```
+
 ### 3. Install Dependencies
 
 ```bash
 pip install -r backend/requirements.txt
 ```
+
 ### 4. API Endpoint
+
 🔹 POST /extract
+URL: http://localhost:5000/extract
+Method: POST
+Body Type: form-data
+Field: file (Upload your .pdf or .docx file)
+
+    🔹 POST /filterQuestions
     URL: http://localhost:5000/extract
     Method: POST
-    Body Type: form-data
-    Field: file (Upload your .pdf or .docx file)
+    Body Type: JSON
+    Body Example:
+    {
+    "jobPosition": "Software Engineer"
+    }
+
+    🔹 POST /hybridAnswer
+    URL: http://localhost:5000/extract
+    Method: POST
+    Body Type: JSON
+    Body Example:{
+    "jobPosition": "Software Engineer",
+    "extractedText": "extracted text from CV"
+    }
 
 ### 5. Run the Server
 
 ```bash
 python backend/app.py
+```
