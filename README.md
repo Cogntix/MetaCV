@@ -43,11 +43,11 @@ pip install -r backend/requirements.txt
 
 ### 4. API Endpoint
 
-🔹 POST /extract
-URL: http://localhost:5000/extract
-Method: POST
-Body Type: form-data
-Field: file (Upload your .pdf or .docx file)
+    🔹 POST /extract
+    URL: http://localhost:5000/extract
+    Method: POST
+    Body Type: form-data
+    Field: file (Upload your .pdf or .docx file)
 
     🔹 POST /filterQuestions
     URL: http://localhost:5000/extract
