@@ -67,6 +67,43 @@ pip install -r backend/requirements.txt
     "extractedText": "extracted text from CV"
     }
 
+    🔹 POST /generateMetadata
+    URL: http://localhost:5000/generateMetadata
+    Method: POST
+    Body Type: JSON
+    Body Example:{
+    "jobPosition": "Software Engineer",
+    "extractedText": "extracted text from CV",
+    "answers": [
+    {
+    "question": "What is your full name?",
+    "auto_answer": "Shathurya Paramanathan",
+    "correct_answer": "Shathurya Paramanathan",
+    "metadata_field": "candidate_information.full_name "
+    },]
+    }
+
+    🔹 POST /upload
+    URL: localhost:5000/upload
+    Method: POST
+      Body Type: form-data
+    Field: file (Upload your .pdf or .docx file), "jobPosition" (text)
+
+    🔹 POST /confirm
+    URL: http://localhost:5000/confirm
+    Method: POST
+    Body Type: JSON
+    Body Example:{
+    "jobPosition": "Software Engineer",
+    "extractedText": "extracted text from CV",
+    "answers": [
+    {
+    "question": "What is your full name?",
+    "auto_answer": "Shathurya Paramanathan",
+    "correct_answer": "Shathurya Paramanathan"
+    },]
+    }
+
 ### 5. Run the Server
 
 ```bash
