@@ -65,11 +65,33 @@ def merge_answers_into_metadata(metadata: dict, questions_with_answers: List[Ans
 # Step 3: Combined operation
 def generate_full_metadata(extracted_text: str, questions_with_answers: List[AnswerItem]) -> dict:
     metadata = extract_metadata_from_text(extracted_text)
-    metadata_with_answers = merge_answers_into_metadata(metadata, questions_with_answers)
-    return metadata_with_answers
+    metadata = merge_answers_into_metadata(metadata, questions_with_answers)
+    metadata = apply_qa_answers_to_metadata(metadata, questions_with_answers, override=True)
+    return metadata
 
 
 # Optional: Save to file
 def save_metadata_to_file(data: dict, path: str = "final_metadata.json"):
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
+
+def apply_qa_answers_to_metadata(metadata: dict, questions_with_answers: List[AnswerItem], override: bool = True) -> dict:
+    for qa in questions_with_answers:
+        field_path = qa.metadata_field.strip() if qa.metadata_field else None
+        answer = qa.correct_answer 
+
+        if not field_path or not answer:
+            continue
+
+        keys = field_path.split(".")
+        current = metadata
+
+        for key in keys[:-1]:
+            current = current.setdefault(key, {})
+
+        final_key = keys[-1]
+
+        if override or not current.get(final_key, "").strip():
+            current[final_key] = answer
+
+    return metadata

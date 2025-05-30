@@ -1,13 +1,15 @@
-# routes/extract_route.py
-from fastapi import APIRouter, UploadFile, File
+from fastapi import APIRouter, UploadFile, File, Form
 from pydantic import BaseModel
 from typing import List
+from controllers.upload_flow_controller import upload_cv_full_flow_controller
 from controllers.filter_questions_controller import filter_questions_controller
 from controllers.extract_controller import extract_text_controller
 from controllers.answerQuestions_controller import hybrid_answer_with_user_controller
 from controllers.metaData_controller import generate_metadata_controller
+from controllers.confirm_controller import confirm_answers_controller
 from models.hybrid_answer_model import HybridAnswerRequest
 from models.meta_ai_model import AnswerItem
+
 router = APIRouter()
 
 @router.post("/extract")
@@ -25,10 +27,27 @@ async def filter_questions(payload: FilterRequest):
 async def hybrid_answer_route(payload: HybridAnswerRequest):
     return await hybrid_answer_with_user_controller(payload)
 
+
+class MetadataSampleInput(BaseModel):
+    extracted_text: str
+    answers: List[AnswerItem]
+    
+
+@router.post("/generateMetadata")
+async def generate_metadata_route(payload: MetadataSampleInput):
+    return {"success": True, "metadata": generate_metadata_controller(payload)}
+
+# frontend end points 
+
+@router.post("/upload")
+async def upload_cv(file: UploadFile = File(...), jobPosition: str = Form(...)):
+    return await upload_cv_full_flow_controller(file, jobPosition)
+
 class MetadataInput(BaseModel):
     extracted_text: str
     answers: List[AnswerItem]
+    jobPosition: str
 
-@router.post("/generateMetadata")
-async def generate_metadata_route(payload: MetadataInput):
-    return {"success": True, "metadata": generate_metadata_controller(payload)}
+@router.post("/confirm")
+async def confirm_answers_route(payload: MetadataInput):
+    return await confirm_answers_controller(payload)

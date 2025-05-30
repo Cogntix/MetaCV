@@ -10,7 +10,6 @@ from models.ai_answer_model import AIAnswerResponse, AnswerItem
 os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 
 def generate_ai_answers(cleaned_text: str, job_position: str, questions: list) -> AIAnswerResponse:
-    print("DEBUG: aiResponse type error:")
 
     ai_payload = {
         "cleanedText": cleaned_text,

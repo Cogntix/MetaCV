@@ -13,7 +13,8 @@ async def extract_text_controller(file: UploadFile):
         temp_file_path = await save_upload_to_temp_file(file)
         extracted_text = extract_text_from_file(temp_file_path)
         cleanup_temp_file(temp_file_path)
-        return JSONResponse(content={"extracted_text": extracted_text})
+        return {"extracted_text": extracted_text}
+
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

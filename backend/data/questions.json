@@ -5,7 +5,8 @@
       "question": "What is your full name?",
       "keywords": ["name", "full name", "called", "my name is"],
       "type": "text",
-      "answerSource": "ai"
+      "answerSource": "ai",
+      "field": "candidate_information.full_name "
     },
     {
       "id": "C2",
@@ -20,14 +21,16 @@
         "yahoo"
       ],
       "type": "email",
-      "answerSource": "keywords"
+      "answerSource": "keywords",
+      "field": "candidate_information.email"
     },
     {
       "id": "C3",
       "question": "What is your phone number?",
       "keywords": ["phone", "mobile", "contact", "call", "number", "+", "tel"],
       "type": "phone",
-      "answerSource": "keywords"
+      "answerSource": "keywords",
+      "field": "candidate_information.phone_number"
     },
     {
       "id": "C4",
