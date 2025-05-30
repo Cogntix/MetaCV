@@ -1,0 +1,37 @@
+{
+  "file_information": {
+    "filename": "",
+    "file_type": "",
+    "file_size_kb": 0,
+    "upload_date": "",
+    "uploaded_by": ""
+  },
+  "candidate_information": {
+    "full_name": "",
+    "first_name": "",
+    "profile_summary": "",
+    "country": "",
+    "email": "",
+    "phone_number": "",
+    "address": "",
+    "linkedin_url": "",
+    "portfolio_url": "",
+    "github_url": ""
+  },
+  "education": [],
+  "experience": [],
+  "projects": [],
+  "skills": [],
+  "languages": [],
+  "certifications": [],
+  "application_context": {
+    "position_applied": "",
+    "location_preference": "",
+    "job_type": "",
+    "mode_preference": "",
+    "expected_salary": "",
+    "availability": "",
+    "application_source": ""
+  },
+  "qa_results": {}
+}
