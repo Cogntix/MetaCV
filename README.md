@@ -10,19 +10,24 @@ MetaCV is a backend service for extracting structured information from resumes (
 - Simple API endpoint for integration or testing via Postman
 
 ## 🧰 Tech Stack
-
-- **Python (FastAPI)**
-- **PyMuPDF** (for PDF text-based parsing)
-- **Tesseract OCR**
-- **Poppler** (for `pdf2image`)
-- **Mammoth** (for `.docx` text extraction)
-  note
-- **Python-docx** ( can use it for `.docx` text extraction)
+- Python (FastAPI) – High-performance web framework for building API services.
+- PyMuPDF – Used for extracting text and metadata from text-based PDF files.
+- Tesseract OCR – Optical Character Recognition engine for parsing scanned (image-based) PDF content.
+- Poppler – Backend utility used by pdf2image to convert PDF pages to images for OCR processing.
+- pdf2image – Converts PDF pages into image format for use with Tesseract OCR.
+- Mammoth – Lightweight .docx parser optimized for clean, semantic text extraction.
+- python-docx – Alternative library to extract and manipulate Word documents (.docx format).
+- python-multipart – Enables handling of file uploads via multipart forms.
+- LangChain – Framework for building AI-driven applications using language models, including chain-based metadata reasoning and extraction.
+- GROQ – Integration with GroqCloud for high-speed, low-latency language model inference, especially when used with LangChain.
+- PyTesseract – Python wrapper for Tesseract OCR engine.
+- dotenv – For managing environment variables securely.
+- Uvicorn – ASGI server used to run FastAPI in production or development.
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
-
+ 
 ```bash
 git clone https://github.com/Cogntix/MetaCV.git
 cd MetaCV

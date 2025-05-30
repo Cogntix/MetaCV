@@ -1,9 +1,21 @@
+# FastAPI + Server
 fastapi
 uvicorn
 python-multipart
-pytesseract
-pdf2image
-mammoth
 python-dotenv
-PyMuPDF
-groq
+
+# File parsing & CV extraction
+PyMuPDF                 # For text-based PDF parsing
+pdf2image               # Converts PDF to image (requires Poppler)
+pytesseract             # OCR for image-based PDF
+pillow                  # Required by pdf2image & pytesseract
+mammoth                 # For .docx to text
+python-docx             # Alternative .docx parser
+
+# LangChain + Groq LLM integration
+langchain==0.3.25
+langchain-core==0.3.62
+langchain-groq==0.3.2
+langchain-text-splitters==0.3.8
+langsmith==0.3.43
+groq==0.25.0
