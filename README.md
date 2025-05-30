@@ -50,7 +50,7 @@ pip install -r backend/requirements.txt
     Field: file (Upload your .pdf or .docx file)
 
     🔹 POST /filterQuestions
-    URL: http://localhost:5000/extract
+    URL: http://localhost:5000/filterQuestions
     Method: POST
     Body Type: JSON
     Body Example:
@@ -59,7 +59,7 @@ pip install -r backend/requirements.txt
     }
 
     🔹 POST /hybridAnswer
-    URL: http://localhost:5000/extract
+    URL: localhost:5000/hybridAnswer
     Method: POST
     Body Type: JSON
     Body Example:{
