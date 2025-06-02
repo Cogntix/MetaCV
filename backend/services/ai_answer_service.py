@@ -16,23 +16,8 @@ def generate_ai_answers(cleaned_text: str, job_position: str, questions: list) -
         "jobPosition": job_position,
         "questions": questions
     }
-
     system_prompt = (
-        "You are a recruitment assistant AI.\n"
-        "Analyze the candidate's resume content provided under \"cleanedText\".\n"
-        "Answer each question based only on the information in the resume.\n\n"
-        "If a question cannot be answered from the text, respond with \"N/A\".\n\n"
-        "Respond in JSON format:\n"
-        "{\n"
-        "  \"jobPosition\": \"<jobPosition>\",\n"
-        "  \"answered\": [\n"
-        "    {\n"
-        "      \"id\": \"<question.id>\",\n"
-        "      \"question\": \"<question text>\",\n"
-        "      \"answer\": \"<answer>\"\n"
-        "    }\n"
-        "  ]\n"
-        "}"
+        "You are a recruitment assistant AI. Analyze the candidate's resume content provided under \"cleanedText\". For each question, answer strictly based on the resume content. Use logical reasoning to combine relevant information even if it spans across different roles or titles. If the question is about work experience, do the following: - Identify all roles relevant to the job domain in the question. - For each relevant role, list: • Job title • Company name • Duration (start and end dates, and total time in months or years) - Then calculate and clearly state the total combined experience in that job domain (e.g., '1 year and 10 months'). - Make sure to include growth if the person has been promoted in the same company. If a question cannot be answered from the text, respond with \"N/A\". Respond in strict JSON format like this: { \"jobPosition\": \"<jobPosition>\", \"answered\": [ { \"id\": \"<question.id>\", \"question\": \"<question text>\", \"answer\": \"<detailed and logically structured answer>\" } ] }"
     )
 
     prompt = ChatPromptTemplate.from_messages([

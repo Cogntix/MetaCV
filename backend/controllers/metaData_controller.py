@@ -4,7 +4,6 @@ import logging
 from fastapi import HTTPException
 
 def generate_metadata_controller(payload: MetadataInput) -> dict:
-    # print("DEbug",payload.answers)
     try:
         metadata = generate_full_metadata(payload.extracted_text, payload.answers)
         return metadata

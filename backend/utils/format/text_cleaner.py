@@ -64,3 +64,23 @@ def clean_sensitive_data(text: str) -> Tuple[str, Dict[str, List[str]]]:
     cleaned_text = phone_regex.sub(phone_replacer, cleaned_text)
 
     return cleaned_text, placeholders
+
+def enrich_text_with_links(text, links):
+    enriched_text = text
+    used_links = set()
+
+    for link in links:
+        link_text = link["text"]
+        url = link["url"]
+        
+        # Escape regex special chars
+        safe_text = re.escape(link_text)
+        
+        # Find and append URL once
+        pattern = rf"({safe_text})(?!\s*\(https?://)"
+        enriched_text, count = re.subn(pattern, rf"\1 ({url})", enriched_text, count=1)
+        
+        if count > 0:
+            used_links.add(url)
+    
+    return enriched_text

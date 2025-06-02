@@ -28,7 +28,6 @@ def get_keyword_based_answer(
 
     text = preprocess_text(text).lower()
     question = question.lower()
-
     # Direct pattern extractions
     if "email" in question or answer_type == "email":
         match = re.search(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}", text)
@@ -38,10 +37,21 @@ def get_keyword_based_answer(
         match = re.search(r"(\+\d{1,3}[-\s]?)?(\(?\d{3,4}\)?[-\s]?\d{3,4}[-\s]?\d{3,4}|\d{10})", text)
         return match.group(0) if match else "N/A"
 
-    if "linkedin" in question or answer_type == "url":
+    if "linkedin" in question or answer_type == "linkedin":
         match = re.search(r"(https?://)?(www\.)?linkedin\.com/in/[a-zA-Z0-9-]+", text)
         return match.group(0) if match else "N/A"
 
+    if "behance" in question or answer_type == "behance":
+        match = re.search(r"(https?://)?(www\.)?behance\.net/[a-zA-Z0-9_-]+", text)
+        return match.group(0) if match else "N/A"
+
+    if "portfolio" in question or answer_type == "portfolio":
+        match = re.search(
+            r"(https?://)?(www\.)?([a-zA-Z0-9_-]+\.)*(vercel\.app|netlify\.app|github\.io|portfolio|myportfolio|wixsite|webflow|carrd)\.[a-z]{2,}(/[a-zA-Z0-9_/?=-]*)?",
+            text
+        )
+        return match.group(0) if match else "N/A"
+  
     # Sentence-based keyword matching
     sentences = re.split(r"(?<=[.!?\n])\s+|•", text)
     matched_sentences = []

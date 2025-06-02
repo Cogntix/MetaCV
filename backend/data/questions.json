@@ -43,7 +43,7 @@
         "professional profile"
       ],
       "type": "url",
-      "answerSource": "user"
+      "answerSource": "keywords"
     },
     {
       "id": "C5",
@@ -196,7 +196,7 @@
     }
   ],
   "roleQuestions": {
-    "Software Engineer": [
+    "software-engineer": [
       {
         "id": "SE1",
         "question": "What programming languages are you proficient in?",
@@ -320,7 +320,7 @@
         "answerSource": "ai"
       }
     ],
-    "Data Scientist": [
+    "dataScientist": [
       {
         "id": "DS1",
         "question": "What data analysis tools and languages are you proficient in?",
@@ -423,7 +423,7 @@
         "answerSource": "ai"
       }
     ],
-    "UX/UI Designer": [
+    "ui-ux": [
       {
         "id": "UX1",
         "question": "What design tools are you proficient with?",
@@ -447,7 +447,6 @@
           "work",
           "showcase",
           "design",
-          "behance",
           "dribbble",
           "website"
         ],
@@ -456,6 +455,13 @@
       },
       {
         "id": "UX3",
+        "question": "Can you provide a behance link showcasing your design work?",
+        "keywords": ["design", "behance"],
+        "type": "url",
+        "answerSource": "keywords"
+      },
+      {
+        "id": "UX4",
         "question": "Describe your design process from concept to implementation.",
         "keywords": [
           "process",
@@ -469,7 +475,7 @@
         "answerSource": "ai"
       },
       {
-        "id": "UX4",
+        "id": "UX5",
         "question": "What research methods do you use to inform your design decisions?",
         "keywords": [
           "research",
@@ -483,7 +489,7 @@
         "answerSource": "ai"
       },
       {
-        "id": "UX5",
+        "id": "UX6",
         "question": "Describe a project where you improved user experience significantly.",
         "keywords": [
           "improve",
@@ -498,7 +504,7 @@
         "answerSource": "ai"
       },
       {
-        "id": "UX6",
+        "id": "UX7",
         "question": "How do you collaborate with developers and product managers?",
         "keywords": [
           "collaborate",
@@ -512,7 +518,7 @@
         "answerSource": "ai"
       },
       {
-        "id": "UX7",
+        "id": "UX8",
         "question": "Do you have experience with design systems?",
         "keywords": [
           "design system",
@@ -525,7 +531,7 @@
         "answerSource": "ai"
       }
     ],
-    "Product Manager": [
+    "product": [
       {
         "id": "PM1",
         "question": "Describe a product you managed from concept to launch.",
@@ -624,7 +630,7 @@
         "answerSource": "user"
       }
     ],
-    "DevOps Engineer": [
+    "devops": [
       {
         "id": "DO1",
         "question": "What CI/CD tools have you worked with?",
@@ -723,7 +729,7 @@
         "answerSource": "ai"
       }
     ],
-    "QA Engineer": [
+    "qa-engineer": [
       {
         "id": "QA1",
         "question": "What testing tools and frameworks have you used?",
@@ -821,7 +827,7 @@
         "answerSource": "ai"
       }
     ],
-    "Project Manager": [
+    "project": [
       {
         "id": "PJM1",
         "question": "What project management methodologies have you used?",
@@ -922,7 +928,7 @@
         "answerSource": "ai"
       }
     ],
-    "Marketing Specialist": [
+    "marketing": [
       {
         "id": "MK1",
         "question": "What marketing channels are you experienced with?",
@@ -1022,7 +1028,7 @@
         "answerSource": "user"
       }
     ],
-    "Sales Representative": [
+    "sales": [
       {
         "id": "SR1",
         "question": "What CRM systems have you worked with?",
@@ -1122,7 +1128,7 @@
         "answerSource": "user"
       }
     ],
-    "Human Resources": [
+    "hr": [
       {
         "id": "HR1",
         "question": "What HR software systems have you used?",
@@ -1221,174 +1227,6 @@
         "type": "boolean",
         "answerSource": "user"
       }
-    ],
-    "Customer Support": [
-      {
-        "id": "CS1",
-        "question": "What customer service tools have you used?",
-        "keywords": [
-          "tool",
-          "Zendesk",
-          "Intercom",
-          "helpdesk",
-          "customer service",
-          "support"
-        ],
-        "type": "multiselect",
-        "answerSource": "ai"
-      },
-      {
-        "id": "CS2",
-        "question": "Describe how you handle difficult customer interactions.",
-        "keywords": [
-          "difficult",
-          "handle",
-          "customer",
-          "interaction",
-          "conflict resolution",
-          "de-escalation"
-        ],
-        "type": "textarea",
-        "answerSource": "ai"
-      },
-      {
-        "id": "CS3",
-        "question": "What is your experience with implementing support processes?",
-        "keywords": [
-          "process",
-          "implement",
-          "procedure",
-          "workflow",
-          "support process",
-          "optimization"
-        ],
-        "type": "textarea",
-        "answerSource": "ai"
-      },
-      {
-        "id": "CS4",
-        "question": "Describe a situation where you went above and beyond for a customer.",
-        "keywords": [
-          "above",
-          "beyond",
-          "exceed",
-          "expectation",
-          "exceptional service"
-        ],
-        "type": "textarea",
-        "answerSource": "ai"
-      },
-      {
-        "id": "CS5",
-        "question": "How do you prioritize support tickets or customer issues?",
-        "keywords": [
-          "prioritize",
-          "ticket",
-          "issue",
-          "queue",
-          "triage",
-          "priority"
-        ],
-        "type": "textarea",
-        "answerSource": "ai"
-      },
-      {
-        "id": "CS6",
-        "question": "What metrics do you use to measure customer support success?",
-        "keywords": [
-          "metric",
-          "measure",
-          "success",
-          "KPI",
-          "CSAT",
-          "response time"
-        ],
-        "type": "textarea",
-        "answerSource": "ai"
-      },
-      {
-        "id": "CS7",
-        "question": "Have you created knowledge base articles or support documentation?",
-        "keywords": [
-          "knowledge base",
-          "documentation",
-          "article",
-          "help",
-          "FAQ",
-          "wiki"
-        ],
-        "type": "boolean",
-        "answerSource": "ai"
-      }
     ]
-  },
-  "hiringStageForms": {
-    "initialApplication": [
-      "C1",
-      "C2",
-      "C3",
-      "C4",
-      "C5",
-      "C6",
-      "C7",
-      "C8",
-      "C10",
-      "C11",
-      "C12",
-      "C13"
-    ],
-    "secondaryScreening": ["C9", "C14", "C15"],
-    "technicalAssessment": {
-      "Software Engineer": ["SE1", "SE2", "SE3", "SE6", "SE7"],
-      "Data Scientist": ["DS1", "DS2", "DS3", "DS5", "DS7"],
-      "UX/UI Designer": ["UX1", "UX2", "UX3", "UX7"],
-      "Product Manager": ["PM2", "PM3", "PM5", "PM7"],
-      "DevOps Engineer": ["DO1", "DO2", "DO4", "DO7"],
-      "QA Engineer": ["QA1", "QA2", "QA3", "QA6"],
-      "Project Manager": ["PJM1", "PJM2", "PJM4", "PJM7"],
-      "Marketing Specialist": ["MK1", "MK3", "MK6"],
-      "Sales Representative": ["SR1", "SR3", "SR5"],
-      "Human Resources": ["HR1", "HR5", "HR7"],
-      "Customer Support": ["CS1", "CS5", "CS6"]
-    },
-    "finalInterview": {
-      "Software Engineer": ["SE4", "SE5", "SE8"],
-      "Data Scientist": ["DS4", "DS6"],
-      "UX/UI Designer": ["UX4", "UX5", "UX6"],
-      "Product Manager": ["PM1", "PM4", "PM6"],
-      "DevOps Engineer": ["DO3", "DO5", "DO6"],
-      "QA Engineer": ["QA4", "QA5", "QA7"],
-      "Project Manager": ["PJM3", "PJM5", "PJM6"],
-      "Marketing Specialist": ["MK2", "MK4", "MK5", "MK7"],
-      "Sales Representative": ["SR2", "SR4", "SR6", "SR7"],
-      "Human Resources": ["HR2", "HR3", "HR4", "HR6"],
-      "Customer Support": ["CS2", "CS3", "CS4", "CS7"]
-    }
-  },
-  "answerSourceStats": {
-    "keywords": {
-      "count": 6,
-      "questions": ["C1", "C2", "C3", "C4", "C5", "UX2"],
-      "description": "Pattern-based questions that can be answered by keyword matching (name, email, phone, etc.)"
-    },
-    "ai": {
-      "count": 78,
-      "description": "Questions requiring content analysis and intelligent responses (skills, experience, projects, etc.)"
-    },
-    "user": {
-      "count": 8,
-      "questions": [
-        "C6",
-        "C7",
-        "C11",
-        "C12",
-        "C13",
-        "PM7",
-        "MK7",
-        "SR7",
-        "HR7"
-      ],
-      "description": "Questions that typically result in N/A or require direct user input (preferences, availability, authorization, etc.)"
-    }
   }
 }
