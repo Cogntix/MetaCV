@@ -33,12 +33,9 @@ git clone https://github.com/Cogntix/MetaCV.git
 cd MetaCV
 ```
 
-### 2. Create a Virtual Environment
+### 2. Configure Environment Variables
+  > Update the variables with correct values (like API keys, ports, etc.)
 
-```bash
-python -m venv venv
-source venv/bin/activate
-```
 
 ### 3. Install Dependencies
 
