@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Edit3, User, Briefcase, ArrowLeft, Send } from "lucide-react";
 import { toast } from "react-toastify";
- import axios from "axios";
+import axios from "axios";
 
 const QAFormPage = ({ qaData, onBackToUpload }) => {
-  // console.log(qaData);
   const [answers, setAnswers] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [editingQuestion, setEditingQuestion] = useState(null);
   const [tempAnswer, setTempAnswer] = useState("");
 
   const defaultQaData = [
-    // Compulsory questions (C prefix)
     {
       id: "C1",
       question: "What is your full name?",
@@ -42,247 +40,6 @@ const QAFormPage = ({ qaData, onBackToUpload }) => {
       answer: "N/A",
       source: "user",
     },
-    {
-      id: "C6",
-      question: "Are you willing to relocate?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C7",
-      question: "Are you legally authorized to work in this country?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C8",
-      question: "What is your highest level of education?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C9",
-      question: "What languages do you speak and at what proficiency level?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C10",
-      question: "How many years of relevant work experience do you have?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C11",
-      question: "What is your desired salary range?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C12",
-      question: "When can you start working if selected?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C13",
-      question: "How did you hear about this position?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C14",
-      question:
-        "Do you have any professional certifications relevant to this role?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "C15",
-      question: "Briefly describe your career objectives.",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // Software Engineer questions (SE prefix)
-    {
-      id: "SE1",
-      question: "What programming languages are you proficient in?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE2",
-      question: "What frameworks and libraries have you worked with?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE3",
-      question: "Describe your experience with database technologies.",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE4",
-      question: "Have you contributed to any open-source projects?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE5",
-      question:
-        "Describe a challenging project you worked on and how you solved technical problems.",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE6",
-      question: "What version control systems are you familiar with?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE7",
-      question: "What is your experience with cloud platforms?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SE8",
-      question:
-        "Describe your experience with Agile development methodologies.",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // UI/UX Designer questions (UX prefix)
-    {
-      id: "UX1",
-      question: "What design tools are you proficient in?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "UX2",
-      question: "Describe your design process from concept to completion.",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "UX3",
-      question: "How do you conduct user research and testing?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "UX4",
-      question: "What is your experience with prototyping tools?",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // Product Manager questions (PM prefix)
-    {
-      id: "PM1",
-      question: "How do you prioritize product features?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "PM2",
-      question: "Describe your experience with product analytics tools.",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "PM3",
-      question: "How do you gather and analyze customer feedback?",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // Data Scientist questions (DS prefix)
-    {
-      id: "DS1",
-      question: "What programming languages do you use for data analysis?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "DS2",
-      question: "Describe your experience with machine learning frameworks.",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "DS3",
-      question: "How do you handle large datasets?",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // DevOps Engineer questions (DO prefix)
-    {
-      id: "DO1",
-      question: "What CI/CD tools have you worked with?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "DO2",
-      question: "Describe your experience with containerization technologies.",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "DO3",
-      question: "How do you monitor and maintain system performance?",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // Marketing Specialist questions (MK prefix)
-    {
-      id: "MK1",
-      question: "What digital marketing channels have you worked with?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "MK2",
-      question: "How do you measure marketing campaign effectiveness?",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // Sales Representative questions (SL prefix)
-    {
-      id: "SL1",
-      question: "What CRM systems have you used?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "SL2",
-      question: "Describe your sales methodology and approach.",
-      answer: "N/A",
-      source: "user",
-    },
-
-    // HR Business Partner questions (HR prefix)
-    {
-      id: "HR1",
-      question: "What HR information systems have you worked with?",
-      answer: "N/A",
-      source: "user",
-    },
-    {
-      id: "HR2",
-      question: "How do you handle employee relations and conflict resolution?",
-      answer: "N/A",
-      source: "user",
-    },
   ];
 
   const ensureArrayData = (data) => {
@@ -299,19 +56,21 @@ const QAFormPage = ({ qaData, onBackToUpload }) => {
   };
 
   const getJobPrefix = () => {
-    if (!qaData) return "SE"; // default fallback
+    if (!qaData) return "SE";
 
     const jobPosition = qaData.jobPosition || qaData.jobTitle || "";
 
     // Map job positions to prefixes
     const jobPrefixMap = {
-      "Software Engineer": "SE",
+      "software-engineer": "SE",
       "ui-ux": "UX",
+      "qa-engineer": "QA",
       product: "PM",
+      project: "PJ",
       data: "DS",
       devops: "DO",
       marketing: "MK",
-      sales: "SL",
+      sales: "SR",
       hr: "HR",
     };
 
@@ -367,40 +126,38 @@ const QAFormPage = ({ qaData, onBackToUpload }) => {
     setTempAnswer("");
   };
 
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
 
+    const questionsToSubmit = [...personalQuestions, ...technicalQuestions];
 
-const handleSubmit = async () => {
-  setIsSubmitting(true);
+    const submissionData = {
+      jobPosition: qaData?.jobPosition || "N/A",
+      extracted_text: qaData?.extracted_text || "N/A",
+      answers: questionsToSubmit.map((q) => ({
+        question: q.question,
+        correct_answer: answers[q.id] || "",
+      })),
+    };
 
-  const questionsToSubmit = [...personalQuestions, ...technicalQuestions];
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/confirm",
+        submissionData
+      );
 
-  const submissionData = {
-    jobPosition: qaData?.jobPosition || "N/A",
-    extracted_text: qaData?.extracted_text || "N/A",
-    answers: questionsToSubmit.map((q) => ({
-      question: q.question,
-      correct_answer: answers[q.id] || "",
-    })),
+      // console.log("Server response:", response.data);
+      toast.success("Application submitted successfully!");
+      setTimeout(() => {
+        onBackToUpload();
+      }, 2000);
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error("There was an error submitting your application.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-
-  console.log("submissionData", submissionData);
-
-  try {
-    const response = await axios.post("http://localhost:5000/confirm", submissionData);
-
-    console.log("Server response:", response.data);
-    toast.success("Application submitted successfully!");
-     setTimeout(() => {
-      onBackToUpload(); 
-    }, 2000);
-  } catch (error) {
-    console.error("Submission error:", error);
-    toast.error("There was an error submitting your application.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
 
   const handleBackClick = () => {
     if (onBackToUpload) {
@@ -408,7 +165,6 @@ const handleSubmit = async () => {
     }
   };
 
-  // Calculate form completion based on displayed questions only
   const questionsToShow = [...personalQuestions, ...technicalQuestions];
   const isFormComplete = () => {
     return questionsToShow.every(

@@ -3,7 +3,6 @@ import { Upload, FileText, Briefcase, CheckCircle, X } from "lucide-react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
 const UploadPage = ({ onUploadComplete }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [selectedPosition, setSelectedPosition] = useState("");
@@ -13,13 +12,23 @@ const UploadPage = ({ onUploadComplete }) => {
 
   const jobPositions = [
     {
-      id: "Software Engineer",
+      id: "software-engineer",
       title: "Software Engineer",
+      department: "Engineering",
+    },
+    {
+      id: "qa-engineer",
+      title: "QA Engineer",
       department: "Engineering",
     },
     { id: "ui-ux", title: "UI/UX Designer", department: "Design" },
     { id: "product", title: "Product Manager", department: "Product" },
-    { id: "data", title: "Data Scientist", department: "Data & Analytics" },
+    { id: "project", title: "Project Manager", department: "Project" },
+    {
+      id: "dataScientist",
+      title: "Data Scientist",
+      department: "Data & Analytics",
+    },
     { id: "devops", title: "DevOps Engineer", department: "Engineering" },
     { id: "marketing", title: "Marketing Specialist", department: "Marketing" },
     { id: "sales", title: "Sales Representative", department: "Sales" },
@@ -102,10 +111,10 @@ const UploadPage = ({ onUploadComplete }) => {
 
       // Handle successful response
       console.log("Upload success:", response);
-      
+
       // Find the selected position details
       const selectedPositionDetails = jobPositions.find(
-        pos => pos.id === selectedPosition
+        (pos) => pos.id === selectedPosition
       );
 
       // Prepare data to pass to QA form
@@ -117,7 +126,7 @@ const UploadPage = ({ onUploadComplete }) => {
         department: selectedPositionDetails?.department || "",
         uploadResponse: response.data, // Include server response data
         // Add any additional extracted data from the server response
-        ...response.data
+        ...response.data,
       };
 
       // Call the callback function to move to QA page
@@ -126,7 +135,6 @@ const UploadPage = ({ onUploadComplete }) => {
       }
 
       toast.success("CV uploaded successfully! Proceeding to Q&A section...");
-
     } catch (error) {
       console.log("Upload failed:", error);
       toast.error("CV upload failed. Please try again.");
