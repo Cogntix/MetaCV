@@ -15,12 +15,10 @@ if not API_KEY:
 
 os.environ["GROQ_API_KEY"] = API_KEY
 
-
 # Step 0: Load base metadata format
 def load_metadata_template() -> dict:
     with open("data/metadata_template.json", "r") as f:
         return json.load(f)
-
 
 # Step 1: Convert extracted CV text into structured metadata (excluding QA)
 def extract_metadata_from_text(extracted_text: str) -> dict:
@@ -60,7 +58,6 @@ def merge_answers_into_metadata(metadata: dict, questions_with_answers: List[Ans
             }
     metadata["qa_results"] = qa_dict
     return metadata
-
 
 # Step 3: Combined operation
 def generate_full_metadata(extracted_text: str, questions_with_answers: List[AnswerItem]) -> dict:

@@ -15,8 +15,7 @@ MetaCV is a backend service for extracting structured information from resumes (
 - Tesseract OCR – Optical Character Recognition engine for parsing scanned (image-based) PDF content.
 - Poppler – Backend utility used by pdf2image to convert PDF pages to images for OCR processing.
 - pdf2image – Converts PDF pages into image format for use with Tesseract OCR.
-- Mammoth – Lightweight .docx parser optimized for clean, semantic text extraction.
-- python-docx – Alternative library to extract and manipulate Word documents (.docx format).
+- python-docx –  library to extract and manipulate Word documents (.docx format).
 - python-multipart – Enables handling of file uploads via multipart forms.
 - LangChain – Framework for building AI-driven applications using language models, including chain-based metadata reasoning and extraction.
 - GROQ – Integration with GroqCloud for high-speed, low-latency language model inference, especially when used with LangChain.
@@ -34,7 +33,7 @@ cd MetaCV
 ```
 
 ### 2. Configure Environment Variables
-  > Update the variables with correct values (like API keys, ports, etc.)
+  > Update the variables with correct values (like API keys, etc.)
 
 
 ### 3. Install Dependencies
@@ -42,8 +41,13 @@ cd MetaCV
 ```bash
 pip install -r backend/requirements.txt
 ```
+### 4. Run the Server
 
-### 4. API Endpoint
+```bash
+python backend/app.py
+```
+
+### 5. API Endpoint
 
     🔹 POST /extract
     URL: http://localhost:5000/extract
@@ -57,7 +61,7 @@ pip install -r backend/requirements.txt
     Body Type: JSON
     Body Example:
     {
-    "jobPosition": "Software Engineer"
+    "jobPosition": "software-engineer"
     }
 
     🔹 POST /hybridAnswer
@@ -106,8 +110,4 @@ pip install -r backend/requirements.txt
     },]
     }
 
-### 5. Run the Server
 
-```bash
-python backend/app.py
-```

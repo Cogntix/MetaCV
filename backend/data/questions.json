@@ -43,7 +43,8 @@
         "professional profile"
       ],
       "type": "url",
-      "answerSource": "keywords"
+      "answerSource": "keywords",
+      "field": "candidate_information.linkedin_url"
     },
     {
       "id": "C5",
@@ -58,7 +59,8 @@
         "from"
       ],
       "type": "text",
-      "answerSource": "ai"
+      "answerSource": "ai",
+      "field": "candidate_information.address "
     },
     {
       "id": "C6",
@@ -129,7 +131,8 @@
         "career"
       ],
       "type": "number",
-      "answerSource": "ai"
+      "answerSource": "ai",
+      "field": "experience "
     },
     {
       "id": "C11",
@@ -145,7 +148,8 @@
         "annual"
       ],
       "type": "range",
-      "answerSource": "user"
+      "answerSource": "user",
+      "field": "application_context.expected_salary"
     },
     {
       "id": "C12",
@@ -165,7 +169,8 @@
       "question": "How did you hear about this position?",
       "keywords": ["refer", "source", "hear", "about", "found", "discovered"],
       "type": "dropdown",
-      "answerSource": "user"
+      "answerSource": "user",
+      "field": "application_context.application_source"
     },
     {
       "id": "C14",
@@ -178,7 +183,8 @@
         "credential"
       ],
       "type": "list",
-      "answerSource": "ai"
+      "answerSource": "ai",
+      "field": "certifications"
     },
     {
       "id": "C15",
@@ -451,7 +457,8 @@
           "website"
         ],
         "type": "url",
-        "answerSource": "keywords"
+        "answerSource": "keywords",
+        "field": "candidate_information.portfolio_url"
       },
       {
         "id": "UX3",

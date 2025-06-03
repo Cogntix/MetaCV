@@ -9,9 +9,8 @@ PyMuPDF                 # For text-based PDF parsing
 pdf2image               # Converts PDF to image (requires Poppler)
 pytesseract             # OCR for image-based PDF
 pillow                  # Required by pdf2image & pytesseract
-mammoth                 # For .docx to text
-python-docx             # Alternative .docx parser
-
+python-docx             # For .docx to text
+           
 # LangChain + Groq LLM integration
 langchain==0.3.25
 langchain-core==0.3.62

@@ -4,7 +4,6 @@ from routes.extract_route import router as extract
 
 app = FastAPI()
 
-# ✅ Allow frontend (e.g., React) to access backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Change to specific origin like ["http://localhost:3000"] for security
