@@ -69,7 +69,7 @@ python backend/app.py
     Method: POST
     Body Type: JSON
     Body Example:{
-    "jobPosition": "Software Engineer",
+    "jobPosition": "software-engineer",
     "extractedText": "extracted text from CV"
     }
 
@@ -83,7 +83,6 @@ python backend/app.py
     "answers": [
     {
     "question": "What is your full name?",
-    "auto_answer": "Shathurya Paramanathan",
     "correct_answer": "Shathurya Paramanathan",
     "metadata_field": "candidate_information.full_name "
     },]
@@ -105,7 +104,6 @@ python backend/app.py
     "answers": [
     {
     "question": "What is your full name?",
-    "auto_answer": "Shathurya Paramanathan",
     "correct_answer": "Shathurya Paramanathan"
     },]
     }
